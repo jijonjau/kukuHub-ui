@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+:root {
+  --color-text: #854d0e;
+  --color-heading: #713f12;
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+  --color-background: #fffbf5;
+  --color-surface: #ffffff;
+  --color-border: #f1e3d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+}
+
+a {
+  color: var(--color-heading);
+  transition: color 200ms ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(10px);
+    opacity: 0.3;
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
